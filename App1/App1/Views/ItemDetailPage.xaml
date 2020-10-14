@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Unit Controller Name:" FontSize="Medium" />
+        <Entry Text="{Binding UnitName, Mode=TwoWay}" FontSize="Small"/>
+        <Label Text="IPAddress:" FontSize="Medium" />
+        <Entry Text="{Binding IPAddress, Mode=TwoWay}" FontSize="Small"/>
+        <Label Text="Button 1 Name:" FontSize="Medium" />
+        <Entry Text="{Binding RelayOneName, Mode=TwoWay}" FontSize="Small"/>
+        <Label Text="Button 2 Name:" FontSize="Medium" />
+        <Entry Text="{Binding RelayTwoName, Mode=TwoWay}" FontSize="Small"/>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+            <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+            <Button Text="Delete" Clicked="OnAlertYesNoClicked" HorizontalOptions="FillAndExpand"></Button>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
